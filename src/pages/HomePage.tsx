@@ -77,13 +77,13 @@ export default function HomePage() {
 
         <Tabs index={tabIndex} onChange={setTabIndex}>
           <TabList borderBottomWidth="1px" borderBottomColor="gray.200">
-            <Tab _selected={{ borderBottomWidth: '2px', borderBottomColor: 'green.700' }}>
+            <Tab _selected={{ borderBottomWidth: '2px', borderBottomColor: 'green.700' }} _focusVisible={{ boxShadow: '0 0 0 2px var(--chakra-colors-green-700)', outline: 'none' }}>
               Explore
             </Tab>
-            <Tab _selected={{ borderBottomWidth: '2px', borderBottomColor: 'green.700' }}>
+            <Tab _selected={{ borderBottomWidth: '2px', borderBottomColor: 'green.700' }} _focusVisible={{ boxShadow: '0 0 0 2px var(--chakra-colors-green-700)', outline: 'none' }}>
               Search poems
             </Tab>
-            <Tab _selected={{ borderBottomWidth: '2px', borderBottomColor: 'green.700' }}>
+            <Tab _selected={{ borderBottomWidth: '2px', borderBottomColor: 'green.700' }} _focusVisible={{ boxShadow: '0 0 0 2px var(--chakra-colors-green-700)', outline: 'none' }}>
               My favorites
             </Tab>
           </TabList>
