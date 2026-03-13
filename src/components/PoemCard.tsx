@@ -20,11 +20,21 @@ interface PoemCardProps {
 }
 
 const readMoreStyles = (saved: boolean) => ({
+  as: 'button' as const,
   fontSize: 'sm',
   color: saved ? 'white' : 'green.700',
   fontWeight: 'medium',
   cursor: 'pointer',
+  background: 'none',
+  border: 'none',
+  padding: 0,
   _hover: { textDecoration: 'underline', color: saved ? 'white' : 'green.700' },
+  _focusVisible: {
+    outline: '2px solid',
+    outlineColor: saved ? 'white' : 'green.700',
+    outlineOffset: '2px',
+    borderRadius: 'sm',
+  },
 })
 
 const barkBackground = {
@@ -74,9 +84,9 @@ export function PoemCard({ poem, featured = false, isSaved, onSave, onReadMore }
               {excerpt}
             </Text>
             <HStack justify="space-between">
-              <Text {...readMoreStyles(isSaved)} onClick={onReadMore}>
+              <Box {...readMoreStyles(isSaved)} onClick={onReadMore}>
                 Read more
-              </Text>
+              </Box>
               <Text fontSize="xs" color={isSaved ? 'white' : 'gray.400'}>
                 {poem.linecount} lines
               </Text>
